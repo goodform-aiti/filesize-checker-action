@@ -16,8 +16,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: csv lint
-      uses: ateli-development/csvlint-action@master
+    - name: File size checker
+      uses: ateli-development/filesize-checker-action@master
       env:
         MODIFIED_FILES: ${{ steps.file_changes.outputs.files}}
         FILE_SIZE: 5000 # bytes
