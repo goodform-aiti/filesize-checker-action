@@ -26,7 +26,7 @@ echo "$PATHS" | while read FILE ; do
     fi
 
     FILE_SIZE=$(stat -c%s index.php)
-    if [[ $FILE_SIZE > $MAX_FILE_SIZE ]]
+    if (( $FILE_SIZE > $MAX_FILE_SIZE ))
     then
       echo "The filesize of ${FILE} is ${FILE_SIZE} bytes, it should be lower than ${MAX_FILE_SIZE} bytes."
       exit 101
