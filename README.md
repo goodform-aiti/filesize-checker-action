@@ -20,5 +20,5 @@ jobs:
       uses: ateli-development/filesize-checker-action@master
       env:
         MODIFIED_FILES: ${{ steps.file_changes.outputs.files}}
-        FILE_SIZE: 5000 # bytes
+        MAX_FILE_SIZE: 5000 # bytes
 ```
