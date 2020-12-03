@@ -21,7 +21,6 @@ echo "$PATHS" | while read FILE ; do
     fi
     
     if ! file "$FILE" |grep -qE 'image|bitmap'; then
-      echo "File '$FILE' is not image"
       continue
     fi
 
