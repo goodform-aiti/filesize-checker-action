@@ -1,0 +1,5 @@
+name: 'Filesize checker'
+description: 'Filesize checker'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
