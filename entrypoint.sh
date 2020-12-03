@@ -19,9 +19,9 @@ echo "$PATHS" | while read FILE ; do
       # skip deleted files
       continue
     fi
-    IS_FILE_BINARY=$(find $FILE -type f | perl -lne 'print if -B' | wc -l)
-    if [[ ! $IS_FILE_BINARY ]]
-    then
+    
+    if ! file "$FILE" |grep -qE 'image|bitmap'; then
+      echo "File '$FILE' is not image"
       continue
     fi
 
